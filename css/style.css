@@ -1,0 +1,229 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #222;
+  color: #fff;
+  font-family: system-ui;
+  transition: 0.5s ease background-color;
+}
+body.light{
+  background-color: #fff;
+  color: #222;
+  font-family: system-ui;
+  
+}
+.crud{
+  width: 90%;
+  margin: auto;
+}
+.head{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: #111;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 4px ;
+  color: #fff;
+  box-sizing: border-box;
+}
+input:focus{
+  background-color: #000;
+}
+.prices input{
+  width: 20%;
+}
+.prices .total{
+  background-color: red;
+  padding: 5px 2px;
+  border-radius:4px;
+  color: #fff;
+}
+.prices .total::before{
+  content: "Total: ";
+}
+button{
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #520471d9;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+button:hover{
+  background-color: #6a0991d9;
+  letter-spacing: 1px;
+}
+.btnSearch button{
+  width: 40%;
+}
+.btnSearch{
+display:flex;
+justify-content: space-between;
+}
+.deleteAll{
+  margin: 10px 0;
+}
+table{
+  width: 100%;
+  text-align: center;
+  margin: 10px  0;
+}
+table th{
+  text-transform: uppercase;
+}
+th,td{
+  padding: 5px;
+}
+.tbody button{
+letter-spacing: 0;
+}
+
+@media(max-width: 790px){
+  .crud{
+    width: 90%;
+  }
+  .crud input{
+    width: 100%;
+  }
+  .crud .prices .discount{
+    width: 60%;
+  }
+  .tbody button{
+    font-size: 13px;
+    
+  }
+}
+@media(max-width: 590px){
+  .crud{
+    width: 90%;
+  }
+}
+@media(max-width: 506px){
+  .crud .prices {
+    width: 100%;
+  }
+  .crud .prices input{
+    width: 100%;
+  }
+  .crud .prices .discount{
+    width: 60%;
+   display: inline;
+  }
+  .crud .prices .total{
+    padding: 5px;
+  }
+}
+@media(max-width: 400px){
+  .crud .prices {
+    width: 100%;
+  }
+  .crud .prices .discount{
+    width: 40%;
+  }
+  .btnSearch{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btnSearch button{
+    width: 100%;
+  }
+}
+
+@media(max-width: 790px){
+.crud th,td{
+  font-size: 10px;
+}
+}
+@media(max-width: 530px){
+  .crud th,td{
+    padding: 0;
+    font-size: 8px;
+  }
+  .crud .tbody{
+    margin-top: 10px;
+  }
+.crud .tbody button{
+  padding: 5px;
+  font-size: 9px;
+}
+}
+@media(max-width:360px){
+  .crud th{
+    font-size: 7px;
+  }
+}
+@media(max-width:330px){
+.crud{
+  width: 98%;
+}
+}
+
+.darck{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+}
+.alert{
+  width: 300px;
+  height: 150px;
+  background-color:#520471 ;
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert div button{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-top: 40px;
+  background-color: #fff;
+  color: #520471;
+letter-spacing: 0;
+position: absolute;
+bottom: 5px;
+right: 5px;
+}
+@media(max-width:360px){
+  .alert{
+    width: 90%;
+  }
+}
+
+.color{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+}
+.color .icon{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
